@@ -30,7 +30,7 @@ public enum Student {
     return Arrays.stream(Student.values())
         .filter(student -> id == student.getId())
         .findFirst()
-        .orElse(null);
+        .orElseThrow();
   }
 
   public long getId() {
